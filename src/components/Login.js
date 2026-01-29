@@ -151,9 +151,9 @@ export default function Login({ onNavigate }) {
         setSuccess(prev => prev + '\n✅ Remember Me enabled');
       }
       setSessionActive(true);
-      // navigate back to home/landing
+      // navigate to landing page after successful login
       setTimeout(() => {
-        if (onNavigate) onNavigate('home');
+        if (onNavigate) onNavigate('landing');
       }, 800);
       return;
     }
