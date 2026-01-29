@@ -1,0 +1,56 @@
+:root{
+  --bg:#eaf6f7;
+  --card:#ffffff;
+  --muted:#6b7b80;
+  --accent:#7fc2c7;
+  --accent-dark:#4aa0a5;
+  --radius:12px;
+  --container:1100px;
+}
+
+body{background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial;font-size:16px;color:#123;}
+.container{max-width:var(--container);margin:0 auto;padding:2rem;}
+.site-header{background:transparent;padding:1rem 0;}
+.header-inner{display:flex;align-items:center;gap:1rem;justify-content:space-between}
+.brand{font-weight:700;font-size:1.1rem;color:#08333a}
+.nav a{margin:0 0.6rem;color:var(--muted);text-decoration:none}
+.cta .btn{margin-left:1rem}
+
+.hero{background:linear-gradient(180deg, #cfeff0 0%, transparent 100%);padding:4rem 0}
+.hero-inner{display:flex;align-items:center;gap:2rem}
+.hero-left{flex:1}
+.hero-left h1{font-size:2.2rem;margin:0 0 0.5rem;color:#08333a}
+.lead{color:var(--muted);margin-bottom:1rem}
+.hero-actions .btn{margin-right:0.6rem}
+.hero-right{width:360px}
+.hero-mock{height:220px;border-radius:16px;background:linear-gradient(135deg,var(--card),#f3fdfe);box-shadow:0 8px 30px rgba(10,40,45,0.08)}
+
+.content-grid{display:flex;gap:2rem;align-items:flex-start}
+.left-col{flex:2}
+.right-col{flex:1}
+
+.features-grid{display:flex;gap:1rem;margin-bottom:1.4rem}
+.feature-card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(11,40,44,0.06)}
+
+.task-list{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(11,40,44,0.06);margin-top:1rem}
+.section-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.8rem}
+.task-item{padding:0.8rem;border-radius:10px;border:1px solid #eef5f5;margin-bottom:0.6rem}
+.task-title{font-weight:600}
+.task-meta{color:var(--muted);font-size:0.9rem}
+
+.reminder-list{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(11,40,44,0.06)}
+.reminder-item{display:flex;justify-content:space-between;padding:0.6rem;border-radius:8px;border:1px solid #f1f6f6;margin-bottom:0.6rem}
+
+.site-footer{padding:2rem 0;margin-top:2rem}
+.footer-grid{display:flex;justify-content:space-between;gap:2rem}
+.footer-copy{margin-top:1rem;color:var(--muted);font-size:0.9rem}
+
+.btn{padding:0.6rem 1rem;border-radius:10px;border:0;cursor:pointer}
+.btn.primary{background:var(--accent-dark);color:white}
+.btn.ghost{background:transparent;border:1px solid rgba(10,40,45,0.06)}
+.btn.small{padding:0.4rem 0.6rem;font-size:0.9rem}
+
+@media (max-width:900px){
+  .hero-inner{flex-direction:column}
+  .content-grid{flex-direction:column}
+}
