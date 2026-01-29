@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Header() {
+export default function Header({ onNavigate }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -18,6 +18,12 @@ export default function Header() {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     setOpen(false);
+  };
+
+  const handleAuthClick = (page) => {
+    if (onNavigate) {
+      onNavigate(page);
+    }
   };
 
   return (
@@ -48,8 +54,8 @@ export default function Header() {
         </nav>
 
         <div className={open ? 'actions actions-open' : 'actions'}>
-          <button className="btn ghost">Login</button>
-          <button className="btn primary">Sign Up</button>
+          <button className="btn ghost" onClick={() => handleAuthClick('login')}>Login</button>
+          <button className="btn primary" onClick={() => handleAuthClick('register')}>Sign Up</button>
         </div>
       </div>
     </header>

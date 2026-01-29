@@ -1,6 +1,12 @@
 import React from 'react';
 
-export default function Hero() {
+export default function Hero({ onNavigate }) {
+  const handleGetStarted = () => {
+    if (onNavigate) {
+      onNavigate('login');
+    }
+  };
+
   return (
     <section id="home" className="hero">
       <div className="container hero-inner">
@@ -8,7 +14,7 @@ export default function Hero() {
           <h1>Manage Tasks. Set Smart Reminders. Stay Productive.</h1>
           <p className="lead">A modern task and reminder management system that helps you organize work, never miss deadlines, and improve productivity.</p>
           <div className="hero-actions">
-            <button className="btn primary">Get Started</button>
+            <button className="btn primary" onClick={handleGetStarted}>Get Started</button>
             <button className="btn ghost">View Demo</button>
           </div>
         </div>
